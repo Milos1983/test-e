@@ -1,0 +1,527 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-dark">
+    <a class="navbar-brand" routerLink="/profile"><img src="assets/logo.png"></a><span class="navbar-brand-text">PROFILE PAGE</span>
+    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search here people or pages.." aria-label="Search">
+    <i class="fa fa-search loop"></i>
+    <span class="navbar-brand-text-search">Find Friends</span>
+    <ul class="navbar-nav ml-auto navbar-nav-ul">
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-meh-o nav-item-i"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-comments-o nav-item-i"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-light">
+          <i class="fa fa-bolt nav-item-i"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <img class="navbar-img" src="assets/profilepicture.jpg">
+        <span class="navbar-brand-profilename">Milos Sremacki </span>
+      </li>
+      <li class="nav-item dropdown dropdown-arow" ngbDropdown>
+        <i class="fa fa-chevron-down" ngbDropdownToggle></i>
+        <div ngbDropdownMenu>
+          <a routerLink="/login"><button ngbDropdownItem>LogOut</button></a>
+          <a routerLink="/login"><button ngbDropdownItem>Settings</button></a>
+        </div>
+      </li>
+    </ul>
+</nav>
+<div class="container">
+  <header class="jumbotron my-4">
+    <div class="row">
+      <ul class="navbar-nav ml-auto navbar-nav-ul profile-icon-header">
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fa fa-meh-o nav-item-i blue-background"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fa fa-comments-o nav-item-i purple-background"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link waves-effect waves-light">
+              <i class="fa fa-sliders nav-item-i orange-background"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+    <div class="profile-menu">
+      <nav class="navbar navbar-expand-lg navbar-light mobile-none">
+        <ul class="profile-menu__navbar-nav nav-left col-md-4">
+          <li class="nav-item active">
+            <a href="#">Timeline<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Friends</a>
+          </li>
+        </ul>
+        <div class="col-md-4 profile-menu__brand-text">
+          <img class="" src="assets/profilepicture.jpg">
+          <a class="profile-menu__navbar-brand" href=""><span>Milos Sremacki</span></a><br><span class="profile-menu__brand-city-name">Novi Sad, CA</span>
+        </div>
+        <ul class="profile-menu__navbar-nav nav-right col-md-4">
+          <li class="nav-item">
+            <a href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">...</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="navbar navbar-expand-lg navbar-light desktop-none margin-top">
+          <ul class="profile-menu__navbar-nav">
+            <li class="nav-item active">
+              <a href="#">Timeline<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Friends</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">...</a>
+            </li>
+          </ul>
+        </nav>
+      <div class="col-md-12 profile-menu__brand-text desktop-none">
+          <img class="" src="assets/profilepicture.jpg">
+          <a class="profile-menu__navbar-brand" href=""><span>Milos Sremacki</span></a><br><span class="profile-menu__brand-city-name">Novi Sad, CA</span>
+        </div>
+    </div>
+  </header>
+  <div class="row text-center">
+      <div class="col-lg-6 col-md-6 mb-4 table-up-none">
+          <div class="card">
+            <div class="card-body">
+                <div class="row post-header"> 
+                    <img class="card-post-profile-img" src="assets/profilepicture.jpg">
+                    <span class="post-profile-name">Milos Sremacki<span class="postp-dot">...</span><br><span class="post-time">19 hours ago</span></span>
+                    <ul class="post-icon-right">
+                        <li class="post-icon-nav-item"><i class="fa fa-trophy"></i></li>
+                        <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
+                        <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
+                        <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
+                      </ul>
+                </div>
+                <div class="row post">
+                  <p class="post-text">Duis aute irire dolor in repehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariature. Exceptur sint occaecat cupidata non proident, sun in culpa qui offcia deserunt molit anim id est laborum. 
+                    Sed ut prespiciatis unde omnis iste natures erroe sit voluptatem accusantium doloremque.
+                    <span><hr></span>
+                  </p>
+                </div>
+                <div class="row fotter-wrapper">
+                  <ul class="post-footer">
+                      <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
+                      <li>
+                        <ul class="navbar-nav navbar-nav-ul post-footer-img">
+                          <li><img src="assets/profile5.jpg"></li>
+                          <li><img src="assets/profile2.jpg"></li>
+                          <li><img src="assets/profile4.jpg"></li>
+                          <li><img src="assets/profile3.jpg"> </li>
+                          <li ><img src="assets/profile1.jpg"></li>
+                        </ul>
+                      </li>
+                      <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
+                  </ul>
+                  <ul class="post-footer footer-right">
+                    <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
+                    <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card top">
+              <div class="card-body">
+                  <div class="row post-header"> 
+                    <img class="card-post-profile-img" src="assets/profilepicture.jpg">
+                    <span class="post-profile-name">Milos Sremacki shared <span class="orange-text">Diana Jasmeson</span>'s <span class="orange-text">photo</span>
+                    <span class="postp-dot">...</span><br><span class="post-time">7 hours ago</span></span>
+                    <ul class="post-icon-right">
+                      <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
+                      <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
+                      <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
+                    </ul>
+                  </div>
+                  <div class="row post">
+                    <p class="post-text">Hi! Everyone should check out these amazing photographs that my friend shot the past 
+                      week. Here's on of the....lesave a kind comment!
+                      <img class="post-img" src="assets/street.png">
+                    </p>
+                    <img class="card-post-profile-img" src="assets/woman.jpg">
+                    <span class="post-profile-name">Diana Jameson<br><span class="post-time">16 hours ago</span></span>
+                    <div class="comment">
+                      <p class="post-comment-text">Here'the first photo of our incredible photoshoot from testerday. If you like it 
+                      please say so and tel me what you wanna see next!
+                      <span><hr></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="row fotter-wrapper">
+                    <ul class="post-footer">
+                      <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
+                      <li>
+                        <ul class="navbar-nav navbar-nav-ul post-footer-img">
+                          <li><img src="assets/profile5.jpg"></li>
+                          <li><img src="assets/profile2.jpg"></li>
+                          <li><img src="assets/profile4.jpg"></li>
+                          <li><img src="assets/profile3.jpg"> </li>
+                          <li ><img src="assets/profile1.jpg"></li>
+                        </ul>
+                      </li>
+                      <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
+                    </ul>
+                    <ul class="post-footer footer-right">
+                      <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
+                      <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <span class="profile-card-header">Milos's Badges</span>
+            <hr class="w-100">
+          </div>
+          <div class="row">
+            <ul class="navbar-nav navbar-nav-ul profile-content-icon">
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/linkedinbadge.png">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/fbbadge.png">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/google.png">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/goustbadge.png">
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                  <img src="assets/instagrambadge.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <ul class="navbar-nav navbar-nav-ul profile-content-icon">
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/twiterbadge.png">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/whotupbadge.png">
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                      <img src="assets/yutubebadge.png">
+                    </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link waves-effect waves-light">
+                    <img src="assets/linkedinbadge.png">
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light">
+                  <img src="assets/google.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card top">
+          <div class="card-body">
+              <div class="row">
+                <span class="profile-card-header">My Spotify Playlist</span>
+                <hr class="w-100">
+              </div>
+              <div class="row">
+              <table class="table">
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td><img src="assets/sofdown.jpg"></td>
+                      <td colspan="2" class="bend-name"><span class="spotify-list-title">The Past Starts Slow...<br><span class="spotify-list-subtext">Sistem of a Revenge</span></span></td>
+                      <td>3:22</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td><img src="assets/foo.jpg"></td>
+                      <td colspan="2" class="bend-name"><span class="spotify-list-title">The Pretender<br><span class="spotify-list-subtext">Kung Fighters</span></span></td>
+                      <td>5:48</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td><img src="assets/ironmaiden.jpg"></td>
+                      <td colspan="2" class="bend-name"><span class="spotify-list-title">Blod Brothers<br><span class="spotify-list-subtext">Iron Maiden</span></span></td>
+                      <td>3:06</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">4</th>
+                    <td><img src="assets/sevennofarmy.jpg"></td>
+                    <td colspan="2" class="bend-name"><span class="spotify-list-title">Seven Nation Army<br><span class="spotify-list-subtext">The Black Stripes</span></span></td>
+                    <td>6:17</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">5</th>
+                    <td><img src="assets/fleefmack.jpg"></td>
+                    <td colspan="2" class="bend-name"><span class="spotify-list-title">Killer Queen<br><span class="spotify-list-subtext">Archiduke</span></span></td>
+                    <td>5:40</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 mb-4 table-none">
+      <div class="card">
+        <div class="card-body">
+            <div class="row post-header"> 
+                <img class="card-post-profile-img" src="assets/profilepicture.jpg">
+                <span class="post-profile-name">Milos Sremacki<span class="postp-dot">...</span><br><span class="post-time">19 hours ago</span></span>
+                <ul class="post-icon-right">
+                    <li class="post-icon-nav-item"><i class="fa fa-trophy"></i></li>
+                    <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
+                    <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
+                    <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
+                  </ul>
+            </div>
+            <div class="row post">
+              <p class="post-text">Duis aute irire dolor in repehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariature. Exceptur sint occaecat cupidata non proident, sun in culpa qui offcia deserunt molit anim id est laborum. 
+                Sed ut prespiciatis unde omnis iste natures erroe sit voluptatem accusantium doloremque.
+                <span><hr></span>
+              </p>
+            </div>
+            <div class="row fotter-wrapper">
+              <ul class="post-footer">
+                  <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
+                  <li>
+                    <ul class="navbar-nav navbar-nav-ul post-footer-img">
+                      <li><img src="assets/profile5.jpg"></li>
+                      <li><img src="assets/profile2.jpg"></li>
+                      <li><img src="assets/profile4.jpg"></li>
+                      <li><img src="assets/profile3.jpg"> </li>
+                      <li ><img src="assets/profile1.jpg"></li>
+                    </ul>
+                  </li>
+                  <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
+              </ul>
+              <ul class="post-footer footer-right">
+                <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
+                <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card top">
+          <div class="card-body">
+              <div class="row post-header"> 
+                <img class="card-post-profile-img" src="assets/profilepicture.jpg">
+                <span class="post-profile-name">Milos Sremacki shared <span class="orange-text">Diana Jasmeson</span>'s <span class="orange-text">photo</span>
+                <span class="postp-dot">...</span><br><span class="post-time">7 hours ago</span></span>
+                <ul class="post-icon-right">
+                  <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
+                  <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
+                  <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
+                </ul>
+              </div>
+              <div class="row post">
+                <p class="post-text">Hi! Everyone should check out these amazing photographs that my friend shot the past 
+                  week. Here's on of the....lesave a kind comment!
+                  <img class="post-img" src="assets/street.png">
+                </p>
+                <img class="card-post-profile-img" src="assets/woman.jpg">
+                <span class="post-profile-name">Diana Jameson<br><span class="post-time">16 hours ago</span></span>
+                <div class="comment">
+                  <p class="post-comment-text">Here'the first photo of our incredible photoshoot from testerday. If you like it 
+                  please say so and tel me what you wanna see next!
+                  <span><hr></span>
+                  </p>
+                </div>
+              </div>
+              <div class="row fotter-wrapper">
+                <ul class="post-footer">
+                  <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
+                  <li>
+                    <ul class="navbar-nav navbar-nav-ul post-footer-img">
+                      <li><img src="assets/profile5.jpg"></li>
+                      <li><img src="assets/profile2.jpg"></li>
+                      <li><img src="assets/profile4.jpg"></li>
+                      <li><img src="assets/profile3.jpg"> </li>
+                      <li ><img src="assets/profile1.jpg"></li>
+                    </ul>
+                  </li>
+                  <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
+                </ul>
+                <ul class="post-footer footer-right">
+                  <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
+                  <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-4">
+      <div class="card">
+        <div class="card-body">
+            <div class="row">
+              <span class="profile-card-header">Last Photos</span>
+              <hr class="w-100">
+            </div>
+            <div class="row">
+                <ul class="profile-content-photos">
+                  <li><img src="assets/katedrala.jpg"></li>
+                  <li><img src="assets/novisad.jpg"></li>
+                  <li><img src="assets/summer.jpg"> </li>
+                </ul>
+                <ul class="profile-content-photos">
+                  <li><img src="assets/smayle.jpg"></li>
+                  <li><img src="assets/mix.jpg"></li>
+                  <li><img src="assets/hamburger.jpg"></li>
+                </ul>
+                <ul class="profile-content-photos">
+                  <li><img src="assets/drums.jpg"></li>
+                  <li><img src="assets/hous.jpg"></li>
+                  <li><img src="assets/profileheader.jpg"></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      <div class="card top">
+          <div class="card-body poll-wrraper">
+              <div class="row">
+                  <span class="profile-card-header">James's Poll</span>
+                  <hr class="w-100">
+              </div>
+              <div class="row poll-text">
+                <p>If you hade to choose, wich acto doo you
+                    preferto be the next Darkman?</p>
+              </div>
+              <div class="row">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios">
+                        <span class="actor-name">Thomas Bale</span>
+                        <span class="poll-number">62%</span>
+                      </label>
+                      <div class="left_line"></div>
+                      <div class="right_line"></div>
+                      <div class="row poll-text">
+                        <p class="list-group-padding-top">12 friend voted fo this
+                        </p>
+                      </div>
+                      <ul class="list-image">
+                        <ul class="navbar-nav navbar-nav-ul list-image-img">
+                          <li><img src="assets/profile5.jpg"></li>
+                          <li><img src="assets/profile2.jpg"></li>
+                          <li><img src="assets/profile4.jpg"></li>
+                          <li><img src="assets/profile3.jpg"> </li>
+                          <li><img src="assets/profile1.jpg"></li>
+                          <li><img src="assets/profile2.jpg"></li>
+                          <li><img src="assets/profile4.jpg"></li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                      <div class="radio">
+                          <label>
+                              <input type="radio" name="optionsRadios">
+                              <span class="actor-name">Ben Robertson</span>
+                              <span class="poll-number">27%</span>
+                          </label>
+                          <div class="left_line-two"></div>
+                          <div class="right_line"></div>
+                          <div class="row poll-text">
+                            <p class="list-group-padding-top">5 friend voted fo this
+                            </p>
+                          </div>
+                          <ul class="list-image">
+                            <ul class="navbar-nav navbar-nav-ul list-image-img">
+                              <li><img src="assets/profile5.jpg"></li>
+                              <li><img src="assets/profile2.jpg"></li>
+                              <li><img src="assets/profile4.jpg"></li>
+                              <li><img src="assets/profile3.jpg"> </li>
+                              <li><img src="assets/profile1.jpg"></li>
+                            </ul>
+                          </ul>
+                      </div>
+                  </li>
+                    <li class="list-group-item">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios">
+                                <span class="actor-name">Michael Station</span>
+                                <span class="poll-number">11%</span>
+                            </label>
+                            <div class="left_line-three"></div>
+                            <div class="right_line"></div>
+                            <div class="row poll-text">
+                              <p class="list-group-padding-top">3 friend voted fo this
+                              </p>
+                            </div>
+                            <ul class="list-image">
+                              <ul class="navbar-nav navbar-nav-ul list-image-img">
+                                <li><img src="assets/profile5.jpg"></li>
+                                <li><img src="assets/profile2.jpg"></li>
+                                <li><img src="assets/profile4.jpg"></li>
+                              </ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="row card-vote-position">
+                  <a routerLink="/profile"><button type="submit" class="btn btn-vote">Vote Now!</button></a>
+              </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
