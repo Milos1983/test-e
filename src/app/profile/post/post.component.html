@@ -1,0 +1,46 @@
+<div class="card bottom" *ngFor="let poust of pousts">
+  <div class="card-body">
+      <div class="row post-header"> 
+          <img class="card-post-profile-img" src="assets/profilepicture.jpg">
+          <span class="post-profile-name">{{ poust.name }} {{ poust.lastname }} {{ poust.shared }} <span class="orange-text">{{ poust.fname }} {{ poust.flastname }}</span><span class="orange-text">{{ poust.sharedphoto }}</span>
+          <span class="postp-dot">...</span><br><span class="post-time">{{ poust.timeofpoust }}</span></span>
+          <ul class="post-icon-right">
+              <li class="post-icon-nav-item"><i class="fa fa-trophy"></i></li>
+              <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
+              <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
+              <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
+            </ul>
+      </div>
+      <div class="row post">
+        <p class="post-text">{{ poust.text }}
+            <img class="post-img" [src]="poust.image">
+          </p>
+          <img class="card-post-profile-img" [src]="poust.fimage">
+          <span class="post-profile-name">{{ poust.fname }} {{ poust.flastname }}<br><span class="post-time">{{ poust.ctime }}</span></span>
+          <div class="comment">
+            <p class="post-comment-text">{{ poust.coment }}
+            </p>
+          </div>
+      </div>
+      <p col-12><span><hr></span></p>
+      <div class="row fotter-wrapper">
+        <ul class="post-footer">
+            <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
+            <li>
+              <ul class="navbar-nav navbar-nav-ul post-footer-img">
+                <li><img src="assets/profile5.jpg"></li>
+                <li><img src="assets/profile2.jpg"></li>
+                <li><img src="assets/profile4.jpg"></li>
+                <li><img src="assets/profile3.jpg"> </li>
+                <li ><img src="assets/profile1.jpg"></li>
+              </ul>
+            </li>
+            <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
+        </ul>
+        <ul class="post-footer footer-right">
+          <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
+          <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
+        </ul>
+    </div>
+  </div>
+</div>

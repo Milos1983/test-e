@@ -1,40 +1,5 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-dark">
-    <a class="navbar-brand" routerLink="/profile"><img src="assets/logo.png"></a><span class="navbar-brand-text">PROFILE PAGE</span>
-    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search here people or pages.." aria-label="Search">
-    <i class="fa fa-search loop"></i>
-    <span class="navbar-brand-text-search">Find Friends</span>
-    <ul class="navbar-nav ml-auto navbar-nav-ul">
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fa fa-meh-o nav-item-i"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fa fa-comments-o nav-item-i"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-effect waves-light">
-          <i class="fa fa-bolt nav-item-i"></i>
-        </a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <img class="navbar-img" src="assets/profilepicture.jpg">
-        <span class="navbar-brand-profilename">Milos Sremacki </span>
-      </li>
-      <li class="nav-item dropdown dropdown-arow" ngbDropdown>
-        <i class="fa fa-chevron-down" ngbDropdownToggle></i>
-        <div ngbDropdownMenu>
-          <a routerLink="/login"><button ngbDropdownItem>LogOut</button></a>
-          <a routerLink="/login"><button ngbDropdownItem>Settings</button></a>
-        </div>
-      </li>
-    </ul>
-</nav>
-<div class="container">
+<app-menu *ngFor="let person of profilPerson" [person]="person"></app-menu>
+<div class="container" *ngFor="let person of profilPerson">
   <header class="jumbotron my-4">
     <div class="row">
       <ul class="navbar-nav ml-auto navbar-nav-ul profile-icon-header">
@@ -69,8 +34,8 @@
           </li>
         </ul>
         <div class="col-md-4 profile-menu__brand-text">
-          <img class="" src="assets/profilepicture.jpg">
-          <a class="profile-menu__navbar-brand" href=""><span>Milos Sremacki</span></a><br><span class="profile-menu__brand-city-name">Novi Sad, CA</span>
+          <img class="" [src]="person.imagePath">
+          <a class="profile-menu__navbar-brand" href=""><span>{{ person.name }} {{ person.lastname }}</span></a><br><span class="profile-menu__brand-city-name">{{ person.city }}</span>
         </div>
         <ul class="profile-menu__navbar-nav nav-right col-md-4">
           <li class="nav-item">
@@ -315,93 +280,7 @@
         </div>
     </div>
     <div class="col-12 col-lg-6 mb-4 table-none">
-      <div class="card">
-        <div class="card-body">
-            <div class="row post-header"> 
-                <img class="card-post-profile-img" src="assets/profilepicture.jpg">
-                <span class="post-profile-name">Milos Sremacki<span class="postp-dot">...</span><br><span class="post-time">19 hours ago</span></span>
-                <ul class="post-icon-right">
-                    <li class="post-icon-nav-item"><i class="fa fa-trophy"></i></li>
-                    <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
-                    <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
-                    <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
-                  </ul>
-            </div>
-            <div class="row post">
-              <p class="post-text">Duis aute irire dolor in repehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariature. Exceptur sint occaecat cupidata non proident, sun in culpa qui offcia deserunt molit anim id est laborum. 
-                Sed ut prespiciatis unde omnis iste natures erroe sit voluptatem accusantium doloremque.
-                <span><hr></span>
-              </p>
-            </div>
-            <div class="row fotter-wrapper">
-              <ul class="post-footer">
-                  <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
-                  <li>
-                    <ul class="navbar-nav navbar-nav-ul post-footer-img">
-                      <li><img src="assets/profile5.jpg"></li>
-                      <li><img src="assets/profile2.jpg"></li>
-                      <li><img src="assets/profile4.jpg"></li>
-                      <li><img src="assets/profile3.jpg"> </li>
-                      <li ><img src="assets/profile1.jpg"></li>
-                    </ul>
-                  </li>
-                  <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
-              </ul>
-              <ul class="post-footer footer-right">
-                <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
-                <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
-              </ul>
-          </div>
-        </div>
-      </div>
-      <div class="card top">
-          <div class="card-body">
-              <div class="row post-header"> 
-                <img class="card-post-profile-img" src="assets/profilepicture.jpg">
-                <span class="post-profile-name">Milos Sremacki shared <span class="orange-text">Diana Jasmeson</span>'s <span class="orange-text">photo</span>
-                <span class="postp-dot">...</span><br><span class="post-time">7 hours ago</span></span>
-                <ul class="post-icon-right">
-                  <li class="post-icon-nav-item"><i class="fa fa-heart"></i></li>
-                  <li class="post-icon-nav-item"><i class="fa fa-comments-o"></i></li>
-                  <li class="post-icon-nav-item"><i class="fa fa-exchange"></i></li>
-                </ul>
-              </div>
-              <div class="row post">
-                <p class="post-text">Hi! Everyone should check out these amazing photographs that my friend shot the past 
-                  week. Here's on of the....lesave a kind comment!
-                  <img class="post-img" src="assets/street.png">
-                </p>
-                <img class="card-post-profile-img" src="assets/woman.jpg">
-                <span class="post-profile-name">Diana Jameson<br><span class="post-time">16 hours ago</span></span>
-                <div class="comment">
-                  <p class="post-comment-text">Here'the first photo of our incredible photoshoot from testerday. If you like it 
-                  please say so and tel me what you wanna see next!
-                  <span><hr></span>
-                  </p>
-                </div>
-              </div>
-              <div class="row fotter-wrapper">
-                <ul class="post-footer">
-                  <li class="footer-li"><i class="fa fa-heart"></i><span class="footer-number">8</span></li>
-                  <li>
-                    <ul class="navbar-nav navbar-nav-ul post-footer-img">
-                      <li><img src="assets/profile5.jpg"></li>
-                      <li><img src="assets/profile2.jpg"></li>
-                      <li><img src="assets/profile4.jpg"></li>
-                      <li><img src="assets/profile3.jpg"> </li>
-                      <li ><img src="assets/profile1.jpg"></li>
-                    </ul>
-                  </li>
-                  <li><span class="post-footer-name">Jenny Roberts<span class="post-footer-and"> and</span><br><span class="post-time">6 more liked this</span></span></li>
-                </ul>
-                <ul class="post-footer footer-right">
-                  <li class="footer-li"><i class="fa fa-comments-o"></i><span class="footer-number">17</span></li>
-                  <li class="footer-li"><i class="fa fa-exchange"></i><span class="footer-number">24</span></li>
-                </ul>
-            </div>
-          </div>
-        </div>
+      <app-post *ngFor="let person of profilPerson" [person]="person"></app-post>
     </div>
     <div class="col-12 col-lg-3 mb-4">
       <div class="card">

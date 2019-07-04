@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from './profile.module';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  profilPerson: Person[] = [
+    new Person( 'Milos', 'Sremacki', 'Novi Sad, CA', 'assets/profilepicture.jpg' )
+  ];
 
-  constructor() { }
+  constructor(
+    private user: UserService
+    ) { }
 
   ngOnInit() {
   }

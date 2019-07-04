@@ -37,21 +37,21 @@
        <div class="login-form">
           <h1>Login to your Account</h1>
           <hr>
-          <form action="login.html">
+          <form (submit)=LoginUser($event)>
             <div class="form-group">
-              <input type="email" class="form-control form-control-margintop" id="email" placeholder="Your Email" name="email">
+              <input type="email" class="form-control form-control-margintop" id="email" placeholder="Your Email">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control form-control-marginbottom" id="pwd" placeholder="Your Password" name="pwd">
+              <input type="password" class="form-control form-control-marginbottom" id="pwd" placeholder="Your Password">
             </div>
             <div class="checkbox">
               <label class="label-left"><input type="checkbox" name="remember"><span for="check_1">Remember Me</span></label>
               <label class="label-right"><a href="#">Forgot my Password</a></label>
             </div>
-            <a routerLink="/profile"><button type="submit" class="btn btn-login">Login</button></a>
+            <button type="submit" class="btn btn-login">Login</button>
             <p>OR</p>        
-            <a routerLink="/profile"><button type="submit" class="btn btn-login-fb"><i class="fa fa-facebook-f"></i>Login with Facebook</button></a>
-            <a routerLink="/profile"><button type="submit" class="btn btn-login-tw"><i class="fa fa-twitter"></i>Login with Twitter</button></a>
+            <button type="submit" class="btn btn-login-fb"><i class="fa fa-facebook-f"></i>Login with Facebook</button>
+            <button type="submit" class="btn btn-login-tw"><i class="fa fa-twitter"></i>Login with Twitter</button>
           </form>
           <div class="login-form-footer"><span>Don't you have an account?<a routerLink="/register">Register Now!</a> It's really simple and you can start enjoing all the benefits!</span></div>
        </div>

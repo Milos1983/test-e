@@ -413,6 +413,15 @@ button:focus {outline:0;}
     clip: rect(1px, 1px, 1px, 1px);
   }
 
+  .alert-danger {
+    color: red;
+    background-color: white;
+    border-color: white;
+    font-size: 0.8rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
   @media only screen and (max-width: 768px) { 
     
     h1 {
